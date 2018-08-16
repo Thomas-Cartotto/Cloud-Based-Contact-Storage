@@ -1,0 +1,6 @@
+framework module Pods_Prosper_Code_Challenge {
+  umbrella header "Pods-Prosper Code Challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21AB23206FD143FAA2DF4077 /* Pods_Prosper_Code_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5426A5DD5099674C3E7F11C6 /* Pods_Prosper_Code_ChallengeTests.framework */; };
+		868A68AB2124A012007E47BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68AA2124A012007E47BB /* AppDelegate.swift */; };
+		868A68B02124A012007E47BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868A68AE2124A012007E47BB /* Main.storyboard */; };
+		868A68B32124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 868A68B12124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld */; };
+		868A68B52124A013007E47BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868A68B42124A013007E47BB /* Assets.xcassets */; };
+		868A68B82124A013007E47BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868A68B62124A013007E47BB /* LaunchScreen.storyboard */; };
+		868A68C32124A013007E47BB /* Prosper_Code_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68C22124A013007E47BB /* Prosper_Code_ChallengeTests.swift */; };
+		868A68CE2124A013007E47BB /* Prosper_Code_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68CD2124A013007E47BB /* Prosper_Code_ChallengeUITests.swift */; };
+		868A68E42124A23F007E47BB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68E32124A23F007E47BB /* Contact.swift */; };
+		868A68E62124ABAB007E47BB /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68E52124ABAB007E47BB /* ContactsViewController.swift */; };
+		868A68E82124B11A007E47BB /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68E72124B11A007E47BB /* ContactTableViewCell.swift */; };
+		868A68EA2124B32E007E47BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 868A68E92124B32E007E47BB /* GoogleService-Info.plist */; };
+		868A68EC2124B76D007E47BB /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68EB2124B76D007E47BB /* AppUser.swift */; };
+		868A68EF2124B791007E47BB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68EE2124B791007E47BB /* Application.swift */; };
+		868A68F12124BE4D007E47BB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68F02124BE4D007E47BB /* APIClient.swift */; };
+		868A68F32124C626007E47BB /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68F22124C626007E47BB /* InitialViewController.swift */; };
+		868A68F52125235A007E47BB /* ExpandedContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68F42125235A007E47BB /* ExpandedContactViewController.swift */; };
+		AB452B8DD8FF5A21948B0AB3 /* Pods_Prosper_Code_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D736D4FFC4FA984E36ACC9A /* Pods_Prosper_Code_ChallengeUITests.framework */; };
+		DB9DDEF399102B9776C4CA5E /* Pods_Prosper_Code_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F796E2EBA93A23B0CA05A90 /* Pods_Prosper_Code_Challenge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		868A68BF2124A013007E47BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 868A689F2124A012007E47BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 868A68A62124A012007E47BB;
+			remoteInfo = "Prosper Code Challenge";
+		};
+		868A68CA2124A013007E47BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 868A689F2124A012007E47BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 868A68A62124A012007E47BB;
+			remoteInfo = "Prosper Code Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D736D4FFC4FA984E36ACC9A /* Pods_Prosper_Code_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prosper_Code_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAEE5289C2CBD320FCF31B9 /* Pods-Prosper Code ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code ChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code ChallengeUITests/Pods-Prosper Code ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		453FC8EEA55FA79270993666 /* Pods-Prosper Code ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code ChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code ChallengeUITests/Pods-Prosper Code ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5426A5DD5099674C3E7F11C6 /* Pods_Prosper_Code_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prosper_Code_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BA82DB76CB9AC25E3568AB /* Pods-Prosper Code ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code ChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code ChallengeTests/Pods-Prosper Code ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F796E2EBA93A23B0CA05A90 /* Pods_Prosper_Code_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prosper_Code_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78871E999964346AB31E0AC7 /* Pods-Prosper Code Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code Challenge/Pods-Prosper Code Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		868A68A72124A012007E47BB /* Prosper Code Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prosper Code Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		868A68AA2124A012007E47BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		868A68AF2124A012007E47BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		868A68B22124A012007E47BB /* Prosper_Code_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Prosper_Code_Challenge.xcdatamodel; sourceTree = "<group>"; };
+		868A68B42124A013007E47BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		868A68B72124A013007E47BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		868A68B92124A013007E47BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		868A68BE2124A013007E47BB /* Prosper Code ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prosper Code ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		868A68C22124A013007E47BB /* Prosper_Code_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prosper_Code_ChallengeTests.swift; sourceTree = "<group>"; };
+		868A68C42124A013007E47BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		868A68C92124A013007E47BB /* Prosper Code ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prosper Code ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		868A68CD2124A013007E47BB /* Prosper_Code_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prosper_Code_ChallengeUITests.swift; sourceTree = "<group>"; };
+		868A68CF2124A013007E47BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		868A68E32124A23F007E47BB /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		868A68E52124ABAB007E47BB /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		868A68E72124B11A007E47BB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		868A68E92124B32E007E47BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		868A68EB2124B76D007E47BB /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		868A68EE2124B791007E47BB /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		868A68F02124BE4D007E47BB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		868A68F22124C626007E47BB /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		868A68F42125235A007E47BB /* ExpandedContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedContactViewController.swift; sourceTree = "<group>"; };
+		8BC0FEDC1BAC95C17443BB8B /* Pods-Prosper Code Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code Challenge/Pods-Prosper Code Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		E9FE696D7AD97B9AF2BC923A /* Pods-Prosper Code ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code ChallengeTests/Pods-Prosper Code ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		868A68A42124A012007E47BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB9DDEF399102B9776C4CA5E /* Pods_Prosper_Code_Challenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868A68BB2124A013007E47BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21AB23206FD143FAA2DF4077 /* Pods_Prosper_Code_ChallengeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868A68C62124A013007E47BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB452B8DD8FF5A21948B0AB3 /* Pods_Prosper_Code_ChallengeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F843596716EE31B4BB4F459 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78871E999964346AB31E0AC7 /* Pods-Prosper Code Challenge.debug.xcconfig */,
+				8BC0FEDC1BAC95C17443BB8B /* Pods-Prosper Code Challenge.release.xcconfig */,
+				67BA82DB76CB9AC25E3568AB /* Pods-Prosper Code ChallengeTests.debug.xcconfig */,
+				E9FE696D7AD97B9AF2BC923A /* Pods-Prosper Code ChallengeTests.release.xcconfig */,
+				453FC8EEA55FA79270993666 /* Pods-Prosper Code ChallengeUITests.debug.xcconfig */,
+				3DAEE5289C2CBD320FCF31B9 /* Pods-Prosper Code ChallengeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		868A689E2124A012007E47BB = {
+			isa = PBXGroup;
+			children = (
+				868A68A92124A012007E47BB /* Prosper Code Challenge */,
+				868A68C12124A013007E47BB /* Prosper Code ChallengeTests */,
+				868A68CC2124A013007E47BB /* Prosper Code ChallengeUITests */,
+				868A68A82124A012007E47BB /* Products */,
+				6F843596716EE31B4BB4F459 /* Pods */,
+				F4116CD72362AEDA9017BA04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		868A68A82124A012007E47BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				868A68A72124A012007E47BB /* Prosper Code Challenge.app */,
+				868A68BE2124A013007E47BB /* Prosper Code ChallengeTests.xctest */,
+				868A68C92124A013007E47BB /* Prosper Code ChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		868A68A92124A012007E47BB /* Prosper Code Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				868A68ED2124B781007E47BB /* Application */,
+				868A68E02124A104007E47BB /* Networking */,
+				868A68DF2124A0FB007E47BB /* Models */,
+				868A68DE2124A0DB007E47BB /* ViewControllers */,
+				868A68DB2124A07D007E47BB /* StoryBoards */,
+				868A68B42124A013007E47BB /* Assets.xcassets */,
+				868A68AA2124A012007E47BB /* AppDelegate.swift */,
+				868A68B12124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld */,
+				868A68B92124A013007E47BB /* Info.plist */,
+				868A68E92124B32E007E47BB /* GoogleService-Info.plist */,
+			);
+			path = "Prosper Code Challenge";
+			sourceTree = "<group>";
+		};
+		868A68C12124A013007E47BB /* Prosper Code ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				868A68C22124A013007E47BB /* Prosper_Code_ChallengeTests.swift */,
+				868A68C42124A013007E47BB /* Info.plist */,
+			);
+			path = "Prosper Code ChallengeTests";
+			sourceTree = "<group>";
+		};
+		868A68CC2124A013007E47BB /* Prosper Code ChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				868A68CD2124A013007E47BB /* Prosper_Code_ChallengeUITests.swift */,
+				868A68CF2124A013007E47BB /* Info.plist */,
+			);
+			path = "Prosper Code ChallengeUITests";
+			sourceTree = "<group>";
+		};
+		868A68DB2124A07D007E47BB /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				868A68AE2124A012007E47BB /* Main.storyboard */,
+				868A68B62124A013007E47BB /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		868A68DE2124A0DB007E47BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				868A68E52124ABAB007E47BB /* ContactsViewController.swift */,
+				868A68F42125235A007E47BB /* ExpandedContactViewController.swift */,
+				868A68F22124C626007E47BB /* InitialViewController.swift */,
+				868A68E72124B11A007E47BB /* ContactTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		868A68DF2124A0FB007E47BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				868A68E32124A23F007E47BB /* Contact.swift */,
+				868A68EB2124B76D007E47BB /* AppUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		868A68E02124A104007E47BB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				868A68F02124BE4D007E47BB /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		868A68ED2124B781007E47BB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				868A68EE2124B791007E47BB /* Application.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F4116CD72362AEDA9017BA04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F796E2EBA93A23B0CA05A90 /* Pods_Prosper_Code_Challenge.framework */,
+				5426A5DD5099674C3E7F11C6 /* Pods_Prosper_Code_ChallengeTests.framework */,
+				2D736D4FFC4FA984E36ACC9A /* Pods_Prosper_Code_ChallengeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		868A68A62124A012007E47BB /* Prosper Code Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 868A68D22124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code Challenge" */;
+			buildPhases = (
+				71DB3FCB7C833028B36EF0E5 /* [CP] Check Pods Manifest.lock */,
+				868A68A32124A012007E47BB /* Sources */,
+				868A68A42124A012007E47BB /* Frameworks */,
+				868A68A52124A012007E47BB /* Resources */,
+				D98A02C182C88737F909C5E6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Prosper Code Challenge";
+			productName = "Prosper Code Challenge";
+			productReference = 868A68A72124A012007E47BB /* Prosper Code Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		868A68BD2124A013007E47BB /* Prosper Code ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 868A68D52124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code ChallengeTests" */;
+			buildPhases = (
+				8DE7ED83A482642CB15F53FA /* [CP] Check Pods Manifest.lock */,
+				868A68BA2124A013007E47BB /* Sources */,
+				868A68BB2124A013007E47BB /* Frameworks */,
+				868A68BC2124A013007E47BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				868A68C02124A013007E47BB /* PBXTargetDependency */,
+			);
+			name = "Prosper Code ChallengeTests";
+			productName = "Prosper Code ChallengeTests";
+			productReference = 868A68BE2124A013007E47BB /* Prosper Code ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		868A68C82124A013007E47BB /* Prosper Code ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 868A68D82124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code ChallengeUITests" */;
+			buildPhases = (
+				643A97F4B77E13E68DDD90E3 /* [CP] Check Pods Manifest.lock */,
+				868A68C52124A013007E47BB /* Sources */,
+				868A68C62124A013007E47BB /* Frameworks */,
+				868A68C72124A013007E47BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				868A68CB2124A013007E47BB /* PBXTargetDependency */,
+			);
+			name = "Prosper Code ChallengeUITests";
+			productName = "Prosper Code ChallengeUITests";
+			productReference = 868A68C92124A013007E47BB /* Prosper Code ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		868A689F2124A012007E47BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = com.skipptheline.ios;
+				TargetAttributes = {
+					868A68A62124A012007E47BB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					868A68BD2124A013007E47BB = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 868A68A62124A012007E47BB;
+					};
+					868A68C82124A013007E47BB = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 868A68A62124A012007E47BB;
+					};
+				};
+			};
+			buildConfigurationList = 868A68A22124A012007E47BB /* Build configuration list for PBXProject "Prosper Code Challenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 868A689E2124A012007E47BB;
+			productRefGroup = 868A68A82124A012007E47BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				868A68A62124A012007E47BB /* Prosper Code Challenge */,
+				868A68BD2124A013007E47BB /* Prosper Code ChallengeTests */,
+				868A68C82124A013007E47BB /* Prosper Code ChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		868A68A52124A012007E47BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868A68B82124A013007E47BB /* LaunchScreen.storyboard in Resources */,
+				868A68EA2124B32E007E47BB /* GoogleService-Info.plist in Resources */,
+				868A68B52124A013007E47BB /* Assets.xcassets in Resources */,
+				868A68B02124A012007E47BB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868A68BC2124A013007E47BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868A68C72124A013007E47BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		643A97F4B77E13E68DDD90E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Prosper Code ChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71DB3FCB7C833028B36EF0E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Prosper Code Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DE7ED83A482642CB15F53FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Prosper Code ChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D98A02C182C88737F909C5E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Prosper Code Challenge/Pods-Prosper Code Challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFDateHelper/AFDateHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFDateHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Prosper Code Challenge/Pods-Prosper Code Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		868A68A32124A012007E47BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868A68E42124A23F007E47BB /* Contact.swift in Sources */,
+				868A68EF2124B791007E47BB /* Application.swift in Sources */,
+				868A68E82124B11A007E47BB /* ContactTableViewCell.swift in Sources */,
+				868A68F32124C626007E47BB /* InitialViewController.swift in Sources */,
+				868A68F52125235A007E47BB /* ExpandedContactViewController.swift in Sources */,
+				868A68B32124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld in Sources */,
+				868A68AB2124A012007E47BB /* AppDelegate.swift in Sources */,
+				868A68EC2124B76D007E47BB /* AppUser.swift in Sources */,
+				868A68F12124BE4D007E47BB /* APIClient.swift in Sources */,
+				868A68E62124ABAB007E47BB /* ContactsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868A68BA2124A013007E47BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868A68C32124A013007E47BB /* Prosper_Code_ChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868A68C52124A013007E47BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868A68CE2124A013007E47BB /* Prosper_Code_ChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		868A68C02124A013007E47BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 868A68A62124A012007E47BB /* Prosper Code Challenge */;
+			targetProxy = 868A68BF2124A013007E47BB /* PBXContainerItemProxy */;
+		};
+		868A68CB2124A013007E47BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 868A68A62124A012007E47BB /* Prosper Code Challenge */;
+			targetProxy = 868A68CA2124A013007E47BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		868A68AE2124A012007E47BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				868A68AF2124A012007E47BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		868A68B62124A013007E47BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				868A68B72124A013007E47BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		868A68D02124A013007E47BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		868A68D12124A013007E47BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		868A68D32124A013007E47BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78871E999964346AB31E0AC7 /* Pods-Prosper Code Challenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJ36KL7V8C;
+				INFOPLIST_FILE = "Prosper Code Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Prosper-Code-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		868A68D42124A013007E47BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC0FEDC1BAC95C17443BB8B /* Pods-Prosper Code Challenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJ36KL7V8C;
+				INFOPLIST_FILE = "Prosper Code Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Prosper-Code-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		868A68D62124A013007E47BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BA82DB76CB9AC25E3568AB /* Pods-Prosper Code ChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJ36KL7V8C;
+				INFOPLIST_FILE = "Prosper Code ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Prosper-Code-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prosper Code Challenge.app/Prosper Code Challenge";
+			};
+			name = Debug;
+		};
+		868A68D72124A013007E47BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9FE696D7AD97B9AF2BC923A /* Pods-Prosper Code ChallengeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJ36KL7V8C;
+				INFOPLIST_FILE = "Prosper Code ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Prosper-Code-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prosper Code Challenge.app/Prosper Code Challenge";
+			};
+			name = Release;
+		};
+		868A68D92124A013007E47BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 453FC8EEA55FA79270993666 /* Pods-Prosper Code ChallengeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJ36KL7V8C;
+				INFOPLIST_FILE = "Prosper Code ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Prosper-Code-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Prosper Code Challenge";
+			};
+			name = Debug;
+		};
+		868A68DA2124A013007E47BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAEE5289C2CBD320FCF31B9 /* Pods-Prosper Code ChallengeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJ36KL7V8C;
+				INFOPLIST_FILE = "Prosper Code ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Prosper-Code-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Prosper Code Challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		868A68A22124A012007E47BB /* Build configuration list for PBXProject "Prosper Code Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				868A68D02124A013007E47BB /* Debug */,
+				868A68D12124A013007E47BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		868A68D22124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				868A68D32124A013007E47BB /* Debug */,
+				868A68D42124A013007E47BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		868A68D52124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				868A68D62124A013007E47BB /* Debug */,
+				868A68D72124A013007E47BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		868A68D82124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				868A68D92124A013007E47BB /* Debug */,
+				868A68DA2124A013007E47BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		868A68B12124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				868A68B22124A012007E47BB /* Prosper_Code_Challenge.xcdatamodel */,
+			);
+			currentVersion = 868A68B22124A012007E47BB /* Prosper_Code_Challenge.xcdatamodel */;
+			path = Prosper_Code_Challenge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 868A689F2124A012007E47BB /* Project object */;
+}
