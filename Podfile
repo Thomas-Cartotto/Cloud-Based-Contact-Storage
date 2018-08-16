@@ -17,9 +17,12 @@ target 'Prosper Code Challenge' do
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
 
-  target 'Prosper Code ChallengeTests' do
+  target 'Challenge Unit Tests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase'
+    pod 'ObjectMapper'
+    pod 'Alamofire'
   end
 
   target 'Prosper Code ChallengeUITests' do

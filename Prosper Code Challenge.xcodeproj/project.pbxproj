@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21AB23206FD143FAA2DF4077 /* Pods_Prosper_Code_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5426A5DD5099674C3E7F11C6 /* Pods_Prosper_Code_ChallengeTests.framework */; };
+		862161A3212608A300CEECBE /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862161A2212608A300CEECBE /* ContactTests.swift */; };
+		862161A721260B0F00CEECBE /* AppUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862161A621260B0F00CEECBE /* AppUserTests.swift */; };
+		862161AA21260DBB00CEECBE /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862161A921260DBB00CEECBE /* HelperFunctions.swift */; };
+		862161AC21260E4400CEECBE /* AppUserResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 862161AB21260E4300CEECBE /* AppUserResponse.json */; };
+		862161AE2126111600CEECBE /* ContactResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 862161AD2126111600CEECBE /* ContactResponse.json */; };
 		868A68AB2124A012007E47BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68AA2124A012007E47BB /* AppDelegate.swift */; };
 		868A68B02124A012007E47BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868A68AE2124A012007E47BB /* Main.storyboard */; };
 		868A68B32124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 868A68B12124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld */; };
 		868A68B52124A013007E47BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868A68B42124A013007E47BB /* Assets.xcassets */; };
 		868A68B82124A013007E47BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868A68B62124A013007E47BB /* LaunchScreen.storyboard */; };
-		868A68C32124A013007E47BB /* Prosper_Code_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68C22124A013007E47BB /* Prosper_Code_ChallengeTests.swift */; };
 		868A68CE2124A013007E47BB /* Prosper_Code_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68CD2124A013007E47BB /* Prosper_Code_ChallengeUITests.swift */; };
 		868A68E42124A23F007E47BB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68E32124A23F007E47BB /* Contact.swift */; };
 		868A68E62124ABAB007E47BB /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68E52124ABAB007E47BB /* ContactsViewController.swift */; };
@@ -25,11 +28,12 @@
 		868A68F32124C626007E47BB /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68F22124C626007E47BB /* InitialViewController.swift */; };
 		868A68F52125235A007E47BB /* ExpandedContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68F42125235A007E47BB /* ExpandedContactViewController.swift */; };
 		AB452B8DD8FF5A21948B0AB3 /* Pods_Prosper_Code_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D736D4FFC4FA984E36ACC9A /* Pods_Prosper_Code_ChallengeUITests.framework */; };
+		BE40B6E77A640EFF88307827 /* Pods_Challenge_Unit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C27082DFDF7FC50F04361A4 /* Pods_Challenge_Unit_Tests.framework */; };
 		DB9DDEF399102B9776C4CA5E /* Pods_Prosper_Code_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F796E2EBA93A23B0CA05A90 /* Pods_Prosper_Code_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		868A68BF2124A013007E47BB /* PBXContainerItemProxy */ = {
+		8621619C212607A600CEECBE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 868A689F2124A012007E47BB /* Project object */;
 			proxyType = 1;
@@ -46,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C27082DFDF7FC50F04361A4 /* Pods_Challenge_Unit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Unit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D736D4FFC4FA984E36ACC9A /* Pods_Prosper_Code_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prosper_Code_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAEE5289C2CBD320FCF31B9 /* Pods-Prosper Code ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code ChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code ChallengeUITests/Pods-Prosper Code ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		453FC8EEA55FA79270993666 /* Pods-Prosper Code ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code ChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code ChallengeUITests/Pods-Prosper Code ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -53,6 +58,14 @@
 		67BA82DB76CB9AC25E3568AB /* Pods-Prosper Code ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code ChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code ChallengeTests/Pods-Prosper Code ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F796E2EBA93A23B0CA05A90 /* Pods_Prosper_Code_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prosper_Code_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78871E999964346AB31E0AC7 /* Pods-Prosper Code Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code Challenge/Pods-Prosper Code Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		83B59C440CBFB4F028D213B0 /* Pods-Challenge Unit Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge Unit Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge Unit Tests/Pods-Challenge Unit Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		86216197212607A600CEECBE /* Challenge Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Challenge Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8621619B212607A600CEECBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		862161A2212608A300CEECBE /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
+		862161A621260B0F00CEECBE /* AppUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserTests.swift; sourceTree = "<group>"; };
+		862161A921260DBB00CEECBE /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		862161AB21260E4300CEECBE /* AppUserResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppUserResponse.json; sourceTree = "<group>"; };
+		862161AD2126111600CEECBE /* ContactResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ContactResponse.json; sourceTree = "<group>"; };
 		868A68A72124A012007E47BB /* Prosper Code Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prosper Code Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		868A68AA2124A012007E47BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868A68AF2124A012007E47BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,9 +73,6 @@
 		868A68B42124A013007E47BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868A68B72124A013007E47BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		868A68B92124A013007E47BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		868A68BE2124A013007E47BB /* Prosper Code ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prosper Code ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		868A68C22124A013007E47BB /* Prosper_Code_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prosper_Code_ChallengeTests.swift; sourceTree = "<group>"; };
-		868A68C42124A013007E47BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		868A68C92124A013007E47BB /* Prosper Code ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prosper Code ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		868A68CD2124A013007E47BB /* Prosper_Code_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prosper_Code_ChallengeUITests.swift; sourceTree = "<group>"; };
 		868A68CF2124A013007E47BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,23 +86,24 @@
 		868A68F22124C626007E47BB /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		868A68F42125235A007E47BB /* ExpandedContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedContactViewController.swift; sourceTree = "<group>"; };
 		8BC0FEDC1BAC95C17443BB8B /* Pods-Prosper Code Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code Challenge/Pods-Prosper Code Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		D750887A55F761A171191B79 /* Pods-Challenge Unit Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge Unit Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge Unit Tests/Pods-Challenge Unit Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E9FE696D7AD97B9AF2BC923A /* Pods-Prosper Code ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prosper Code ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prosper Code ChallengeTests/Pods-Prosper Code ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		86216194212607A600CEECBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE40B6E77A640EFF88307827 /* Pods_Challenge_Unit_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		868A68A42124A012007E47BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DB9DDEF399102B9776C4CA5E /* Pods_Prosper_Code_Challenge.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		868A68BB2124A013007E47BB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21AB23206FD143FAA2DF4077 /* Pods_Prosper_Code_ChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,16 +127,47 @@
 				E9FE696D7AD97B9AF2BC923A /* Pods-Prosper Code ChallengeTests.release.xcconfig */,
 				453FC8EEA55FA79270993666 /* Pods-Prosper Code ChallengeUITests.debug.xcconfig */,
 				3DAEE5289C2CBD320FCF31B9 /* Pods-Prosper Code ChallengeUITests.release.xcconfig */,
+				83B59C440CBFB4F028D213B0 /* Pods-Challenge Unit Tests.debug.xcconfig */,
+				D750887A55F761A171191B79 /* Pods-Challenge Unit Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		86216198212607A600CEECBE /* Challenge Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				862161A821260C4400CEECBE /* Testing Helpers */,
+				862161A4212608B300CEECBE /* Model Tests */,
+				8621619B212607A600CEECBE /* Info.plist */,
+			);
+			path = "Challenge Unit Tests";
+			sourceTree = "<group>";
+		};
+		862161A4212608B300CEECBE /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				862161A2212608A300CEECBE /* ContactTests.swift */,
+				862161A621260B0F00CEECBE /* AppUserTests.swift */,
+			);
+			path = "Model Tests";
+			sourceTree = "<group>";
+		};
+		862161A821260C4400CEECBE /* Testing Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				862161A921260DBB00CEECBE /* HelperFunctions.swift */,
+				862161AB21260E4300CEECBE /* AppUserResponse.json */,
+				862161AD2126111600CEECBE /* ContactResponse.json */,
+			);
+			path = "Testing Helpers";
 			sourceTree = "<group>";
 		};
 		868A689E2124A012007E47BB = {
 			isa = PBXGroup;
 			children = (
 				868A68A92124A012007E47BB /* Prosper Code Challenge */,
-				868A68C12124A013007E47BB /* Prosper Code ChallengeTests */,
 				868A68CC2124A013007E47BB /* Prosper Code ChallengeUITests */,
+				86216198212607A600CEECBE /* Challenge Unit Tests */,
 				868A68A82124A012007E47BB /* Products */,
 				6F843596716EE31B4BB4F459 /* Pods */,
 				F4116CD72362AEDA9017BA04 /* Frameworks */,
@@ -136,8 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				868A68A72124A012007E47BB /* Prosper Code Challenge.app */,
-				868A68BE2124A013007E47BB /* Prosper Code ChallengeTests.xctest */,
 				868A68C92124A013007E47BB /* Prosper Code ChallengeUITests.xctest */,
+				86216197212607A600CEECBE /* Challenge Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,15 +199,6 @@
 				868A68E92124B32E007E47BB /* GoogleService-Info.plist */,
 			);
 			path = "Prosper Code Challenge";
-			sourceTree = "<group>";
-		};
-		868A68C12124A013007E47BB /* Prosper Code ChallengeTests */ = {
-			isa = PBXGroup;
-			children = (
-				868A68C22124A013007E47BB /* Prosper_Code_ChallengeTests.swift */,
-				868A68C42124A013007E47BB /* Info.plist */,
-			);
-			path = "Prosper Code ChallengeTests";
 			sourceTree = "<group>";
 		};
 		868A68CC2124A013007E47BB /* Prosper Code ChallengeUITests */ = {
@@ -228,6 +261,7 @@
 				6F796E2EBA93A23B0CA05A90 /* Pods_Prosper_Code_Challenge.framework */,
 				5426A5DD5099674C3E7F11C6 /* Pods_Prosper_Code_ChallengeTests.framework */,
 				2D736D4FFC4FA984E36ACC9A /* Pods_Prosper_Code_ChallengeUITests.framework */,
+				1C27082DFDF7FC50F04361A4 /* Pods_Challenge_Unit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +269,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		86216196212607A600CEECBE /* Challenge Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8621619E212607A600CEECBE /* Build configuration list for PBXNativeTarget "Challenge Unit Tests" */;
+			buildPhases = (
+				5CC7124AD9C7D049DCD12267 /* [CP] Check Pods Manifest.lock */,
+				86216193212607A600CEECBE /* Sources */,
+				86216194212607A600CEECBE /* Frameworks */,
+				86216195212607A600CEECBE /* Resources */,
+				9ABC3AB0278859F7AA8E87F9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8621619D212607A600CEECBE /* PBXTargetDependency */,
+			);
+			name = "Challenge Unit Tests";
+			productName = "Challenge Unit Tests";
+			productReference = 86216197212607A600CEECBE /* Challenge Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		868A68A62124A012007E47BB /* Prosper Code Challenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 868A68D22124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code Challenge" */;
@@ -253,25 +307,6 @@
 			productName = "Prosper Code Challenge";
 			productReference = 868A68A72124A012007E47BB /* Prosper Code Challenge.app */;
 			productType = "com.apple.product-type.application";
-		};
-		868A68BD2124A013007E47BB /* Prosper Code ChallengeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 868A68D52124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code ChallengeTests" */;
-			buildPhases = (
-				8DE7ED83A482642CB15F53FA /* [CP] Check Pods Manifest.lock */,
-				868A68BA2124A013007E47BB /* Sources */,
-				868A68BB2124A013007E47BB /* Frameworks */,
-				868A68BC2124A013007E47BB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				868A68C02124A013007E47BB /* PBXTargetDependency */,
-			);
-			name = "Prosper Code ChallengeTests";
-			productName = "Prosper Code ChallengeTests";
-			productReference = 868A68BE2124A013007E47BB /* Prosper Code ChallengeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		868A68C82124A013007E47BB /* Prosper Code ChallengeUITests */ = {
 			isa = PBXNativeTarget;
@@ -302,12 +337,13 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = com.skipptheline.ios;
 				TargetAttributes = {
+					86216196212607A600CEECBE = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+						TestTargetID = 868A68A62124A012007E47BB;
+					};
 					868A68A62124A012007E47BB = {
 						CreatedOnToolsVersion = 9.4.1;
-					};
-					868A68BD2124A013007E47BB = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 868A68A62124A012007E47BB;
 					};
 					868A68C82124A013007E47BB = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -329,13 +365,22 @@
 			projectRoot = "";
 			targets = (
 				868A68A62124A012007E47BB /* Prosper Code Challenge */,
-				868A68BD2124A013007E47BB /* Prosper Code ChallengeTests */,
 				868A68C82124A013007E47BB /* Prosper Code ChallengeUITests */,
+				86216196212607A600CEECBE /* Challenge Unit Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		86216195212607A600CEECBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				862161AC21260E4400CEECBE /* AppUserResponse.json in Resources */,
+				862161AE2126111600CEECBE /* ContactResponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		868A68A52124A012007E47BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,13 +389,6 @@
 				868A68EA2124B32E007E47BB /* GoogleService-Info.plist in Resources */,
 				868A68B52124A013007E47BB /* Assets.xcassets in Resources */,
 				868A68B02124A012007E47BB /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		868A68BC2124A013007E47BB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +402,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5CC7124AD9C7D049DCD12267 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Challenge Unit Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		643A97F4B77E13E68DDD90E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,22 +456,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8DE7ED83A482642CB15F53FA /* [CP] Check Pods Manifest.lock */ = {
+		9ABC3AB0278859F7AA8E87F9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Challenge Unit Tests/Pods-Challenge Unit Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-Defines-NSData+zlib/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Prosper Code ChallengeTests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge Unit Tests/Pods-Challenge Unit Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D98A02C182C88737F909C5E6 /* [CP] Embed Pods Frameworks */ = {
@@ -430,7 +492,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -467,6 +529,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		86216193212607A600CEECBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				862161A721260B0F00CEECBE /* AppUserTests.swift in Sources */,
+				862161A3212608A300CEECBE /* ContactTests.swift in Sources */,
+				862161AA21260DBB00CEECBE /* HelperFunctions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		868A68A32124A012007E47BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,14 +556,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		868A68BA2124A013007E47BB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				868A68C32124A013007E47BB /* Prosper_Code_ChallengeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		868A68C52124A013007E47BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,10 +567,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		868A68C02124A013007E47BB /* PBXTargetDependency */ = {
+		8621619D212607A600CEECBE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 868A68A62124A012007E47BB /* Prosper Code Challenge */;
-			targetProxy = 868A68BF2124A013007E47BB /* PBXContainerItemProxy */;
+			targetProxy = 8621619C212607A600CEECBE /* PBXContainerItemProxy */;
 		};
 		868A68CB2124A013007E47BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -535,6 +599,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8621619F212607A600CEECBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83B59C440CBFB4F028D213B0 /* Pods-Challenge Unit Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJ36KL7V8C;
+				INFOPLIST_FILE = "Challenge Unit Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Challenge-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prosper Code Challenge.app/Prosper Code Challenge";
+			};
+			name = Debug;
+		};
+		862161A0212607A600CEECBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D750887A55F761A171191B79 /* Pods-Challenge Unit Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJ36KL7V8C;
+				INFOPLIST_FILE = "Challenge Unit Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Challenge-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prosper Code Challenge.app/Prosper Code Challenge";
+			};
+			name = Release;
+		};
 		868A68D02124A013007E47BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -689,50 +798,6 @@
 			};
 			name = Release;
 		};
-		868A68D62124A013007E47BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67BA82DB76CB9AC25E3568AB /* Pods-Prosper Code ChallengeTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UJ36KL7V8C;
-				INFOPLIST_FILE = "Prosper Code ChallengeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Prosper-Code-ChallengeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prosper Code Challenge.app/Prosper Code Challenge";
-			};
-			name = Debug;
-		};
-		868A68D72124A013007E47BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9FE696D7AD97B9AF2BC923A /* Pods-Prosper Code ChallengeTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UJ36KL7V8C;
-				INFOPLIST_FILE = "Prosper Code ChallengeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cartotto.Prosper-Code-ChallengeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prosper Code Challenge.app/Prosper Code Challenge";
-			};
-			name = Release;
-		};
 		868A68D92124A013007E47BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 453FC8EEA55FA79270993666 /* Pods-Prosper Code ChallengeUITests.debug.xcconfig */;
@@ -778,6 +843,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8621619E212607A600CEECBE /* Build configuration list for PBXNativeTarget "Challenge Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8621619F212607A600CEECBE /* Debug */,
+				862161A0212607A600CEECBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		868A68A22124A012007E47BB /* Build configuration list for PBXProject "Prosper Code Challenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -792,15 +866,6 @@
 			buildConfigurations = (
 				868A68D32124A013007E47BB /* Debug */,
 				868A68D42124A013007E47BB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		868A68D52124A013007E47BB /* Build configuration list for PBXNativeTarget "Prosper Code ChallengeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				868A68D62124A013007E47BB /* Debug */,
-				868A68D72124A013007E47BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

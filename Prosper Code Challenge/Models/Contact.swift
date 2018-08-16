@@ -20,9 +20,16 @@ open class Contact: NSObject
     open var contactID: String?
     
     public required init?(map: Map) {}
-    public override init()
+    public init(avatarURL: String?, fullName: String?, email: String?, phoneNumber: String?, timeAdded: Double?, contactID: String?)
     {
         super.init()
+        
+        self.avatarImageURL = avatarURL
+        self.fullName = fullName
+        self.email = email
+        self.phoneNumber = phoneNumber
+        self.timeAdded = timeAdded
+        self.contactID = contactID
     }
     
     open override func isEqual(_ object: Any?) -> Bool
@@ -41,6 +48,8 @@ extension Contact: Mappable
         self.phoneNumber       <- map["phoneNumber"]
         self.timeAdded         <- map["timeAdded"]
         self.email             <- map["email"]
+        self.contactID         <- map["contactID"]
+
     }
 }
 

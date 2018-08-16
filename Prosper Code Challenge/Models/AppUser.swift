@@ -16,7 +16,7 @@ open class AppUser: NSObject
     open var contacts: [Contact]?
     
     public required init?(map: Map) {}
-    public init(email: String, userID: String)
+    public init(email: String?, userID: String?)
     {
         super.init()
         self.email = email

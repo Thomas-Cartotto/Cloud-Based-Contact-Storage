@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8FC89982EE3709889A8D0E3FB0711212"
-               BuildableName = "Pods_Prosper_Code_ChallengeTests.framework"
-               BlueprintName = "Pods-Prosper Code ChallengeTests"
+               BlueprintIdentifier = "32DBF07D4D7ABA59DE3FB7D7A88E0576"
+               BuildableName = "Pods_Challenge_Unit_Tests.framework"
+               BlueprintName = "Pods-Challenge Unit Tests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8FC89982EE3709889A8D0E3FB0711212"
-            BuildableName = "Pods_Prosper_Code_ChallengeTests.framework"
-            BlueprintName = "Pods-Prosper Code ChallengeTests"
+            BlueprintIdentifier = "32DBF07D4D7ABA59DE3FB7D7A88E0576"
+            BuildableName = "Pods_Challenge_Unit_Tests.framework"
+            BlueprintName = "Pods-Challenge Unit Tests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

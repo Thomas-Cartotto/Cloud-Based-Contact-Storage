@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Prosper_Code_ChallengeTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Prosper_Code_ChallengeTestsVersionString[];
+FOUNDATION_EXPORT double Pods_Challenge_Unit_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Challenge_Unit_TestsVersionString[];
 
