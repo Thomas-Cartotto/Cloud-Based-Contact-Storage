@@ -10,13 +10,13 @@ import UIKit
 import SVProgressHUD
 import FirebaseAuth
 
-class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate
+class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ContactAddedDelegate
 {
     
     @IBOutlet weak var contactTableView: UITableView?
     
     private let refreshControl = UIRefreshControl()
-
+    
     var mutableContacts = [Contact]()
     
     override func viewDidLoad()
@@ -44,7 +44,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Creating Buttons on the navigation controller
         let addButton = UIBarButtonItem.init(image: UIImage(named: "add-button")!.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(self.addContact))
         let logoutButton = UIBarButtonItem.init(image: UIImage(named: "exit")!.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(self.logout))
-        self.navigationItem.rightBarButtonItems = [logoutButton, addButton]
+        self.navigationItem.rightBarButtonItems = [addButton, logoutButton]
         self.navigationController?.navigationBar.alpha = 0
 
         // Adding the transition annimation
@@ -54,9 +54,8 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
             self.navigationController?.navigationBar.alpha = 1
         }, completion: nil)
         
-        // Adding the refresh controller
+        // Adding the refresh controller and tableview data
         self.refreshControl.addTarget(self, action: #selector(refreshContacts(_:)), for: .valueChanged)
-        
         if #available(iOS 10.0, *)
         {
             self.contactTableView?.refreshControl = refreshControl
@@ -89,8 +88,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         })
     }
     
-    
-    // MARK: - Table View Functions
+    // MARK: - Table View Delegate Functions
     
     func numberOfSections(in tableView: UITableView) -> Int
     {
@@ -138,7 +136,6 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
             return true
         }
     }
-    
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
     {
@@ -188,9 +185,16 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     {
-        if (self.contactTableView?.contentOffset.y)! > CGFloat(-25.0)
+        if (self.contactTableView?.contentOffset.y)! >= CGFloat(-32.0)
         {
-            self.navigationController?.navigationBar.alpha = 0
+            if (self.contactTableView?.contentOffset.y)! <= CGFloat(0.0)
+            {
+                self.navigationController?.navigationBar.alpha = 1 - ((32 + (self.contactTableView?.contentOffset.y)!) * 0.031) // 0.028 is pre-calculated
+            }
+            else
+            {
+                self.navigationController?.navigationBar.alpha = 0
+            }
         }
         else
         {
@@ -198,11 +202,29 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    // MARK: - Add Contact Delegate Function
+
+    func didAddNewContact()
+    {
+        if Application.shared().currentUser?.contacts != nil
+        {
+            self.mutableContacts = (Application.shared().currentUser?.contacts)!
+            self.contactTableView?.reloadData()
+        }
+    }
+    
     // MARK: Navigation Bar Functions
     
     @objc func addContact() -> Void
     {
-    
+        if let addContactVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddContact") as? AddContactViewController
+        {
+            if let navigator = navigationController
+            {
+                addContactVc.addDelegate = self
+                navigator.pushViewController(addContactVc, animated: true)
+            }
+        }
     }
     
     @objc func logout() -> Void
@@ -226,7 +248,6 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Note this is not pulling from the database but is done to show how self.mutableContacts can be changed and then reset (ie filter or search)
     }
     
-    
     // MARK: User Facing Errors
     
     func showBasicError(title: String, message: String, buttonTitle: String) -> Void
@@ -235,7 +256,5 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
-    
-
 }
+

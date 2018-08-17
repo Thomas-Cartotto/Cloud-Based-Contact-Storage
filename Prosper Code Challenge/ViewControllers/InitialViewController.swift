@@ -18,7 +18,8 @@ class InitialViewController: UIViewController, UITextFieldDelegate
     @IBOutlet weak var emailTextFeild: UITextField?
     @IBOutlet weak var passwordTextFeild: UITextField?
     @IBOutlet weak var continueButton: UIButton?
-    @IBOutlet weak var passwordNote: UILabel?
+    @IBOutlet weak var passwordNote: UITextView?
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView?
     
     override func viewDidLoad()
     {
@@ -38,14 +39,10 @@ class InitialViewController: UIViewController, UITextFieldDelegate
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
         // Adding Style to Buttons
-        self.signUpButton?.layer.cornerRadius = 18
-        self.signUpButton?.clipsToBounds = true
-        self.signUpButton?.layer.borderWidth = 1
-        self.signUpButton?.layer.borderColor = UIColor.black.cgColor
         self.continueButton?.layer.cornerRadius = 18
         self.continueButton?.clipsToBounds = true
         self.continueButton?.layer.borderWidth = 1.5
-        self.continueButton?.layer.borderColor = UIColor.black.cgColor
+        self.continueButton?.layer.borderColor = UIColor.darkGray.cgColor
         
         //Adding Style to the Text Feilds
         self.emailTextFeild?.attributedPlaceholder = NSAttributedString(string: "Enter Email", attributes: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
@@ -55,6 +52,8 @@ class InitialViewController: UIViewController, UITextFieldDelegate
         self.passwordTextFeild?.layer.borderColor = UIColor.clear.cgColor
 
     }
+    
+    // MARK: Logging in and processing functions
     
     func checkForAuthentication() -> Void
     {
@@ -70,22 +69,75 @@ class InitialViewController: UIViewController, UITextFieldDelegate
                 }
                 else
                 {
-                    UIView.animate(withDuration: 0.9, delay: 0, options: [.allowUserInteraction], animations:
-                    {
-                        self.signUpButton?.alpha = 0
-                        self.logoImage?.alpha = 0
-                    })
-                    {
-                        (error) in
-                        let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "RootNavigationController") as! UINavigationController
-                        self.present(vc, animated: false, completion: nil)
-                    }
+                    self.annimateLogin()
                 }
             })
         }
         else
         {
             self.annimateNoButtonSelected()
+        }
+    }
+    
+    // MARK: Login and User creation functions
+    
+    func loginAndSignup() -> Void
+    {
+        
+        guard let emailText = self.emailTextFeild?.text, !emailText.isEmpty else {self.showBasicError(title: "Whoops", message: "Please enter both an email and password. If you dont have a password, enter one and an account will be made for you.", buttonTitle: "Ok") ; return}
+        guard let passwordText = self.passwordTextFeild?.text, !passwordText.isEmpty else {self.showBasicError(title: "Whoops", message: "Please enter both an email and password. If you dont have a password, enter one and an account will be made for you.", buttonTitle: "Ok") ; return}
+        
+        self.annimateSignInLoading(show: false)
+        
+        Auth.auth().createUser(withEmail: emailText, password: passwordText)
+        {
+            (newUser, createError) in
+            
+            if createError != nil || newUser?.uid == nil
+            {
+                Auth.auth().signIn(withEmail: emailText, password: passwordText)
+                {
+                    (currentUser, signinError) in
+                    
+                    if signinError == nil && currentUser?.uid != nil
+                    {
+                        Application.shared().loadCurrentUser(userId: (currentUser?.uid)!, completion:
+                            {
+                                (error, existingAppUser) in
+                                
+                                if existingAppUser != nil && !error
+                                {
+                                    self.annimateLogin()
+                                }
+                                else
+                                {
+                                    self.showBasicError(title: "Unknown Error", message: "There has likely been a network error. Please try again.", buttonTitle: "Ok")
+                                }
+                        })
+                    }
+                    else
+                    {
+                        self.showBasicError(title: "Incorrect Entry", message: "Please make sure you have entered your password correctly and that your email is valid.", buttonTitle: "Ok")
+                    }
+                }
+            }
+            else
+            {
+                guard let newUserID = newUser?.uid else {self.showBasicError(title: "Unknown Error", message: "There has likely been a network error. Please try again.", buttonTitle: "Ok"); return}
+                
+                APIClient.createUser(userID: newUserID, email: emailText, success:
+                    {
+                        (NewAppUser) in
+                        
+                        Application.shared().currentUser = NewAppUser
+                        self.annimateLogin()
+                }, failure:
+                    {
+                        (error) in
+                        
+                        self.showBasicError(title: "Unknown Error", message: "There has likely been a network error. Please try again.", buttonTitle: "Ok")
+                })
+            }
         }
     }
     
@@ -97,6 +149,24 @@ class InitialViewController: UIViewController, UITextFieldDelegate
         {
             self.signUpButton?.alpha = 1
         },completion: nil)
+    }
+    
+    func annimateLogin() -> Void
+    {
+        UIView.animate(withDuration: 0.9, delay: 0, options: [.allowUserInteraction], animations:
+        {
+            self.signUpButton?.alpha = 0
+            self.logoImage?.alpha = 0
+            self.emailTextFeild?.alpha = 0
+            self.passwordTextFeild?.alpha = 0
+            self.continueButton?.alpha = 0
+            self.passwordNote?.alpha = 0
+            self.loadingActivityIndicator?.alpha = 0
+        })
+        { (error) in
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "RootNavigationController") as! UINavigationController
+            self.present(vc, animated: false, completion: nil)
+        }
     }
     
     @IBAction func showTextFeilds(_ sender: Any)
@@ -117,68 +187,12 @@ class InitialViewController: UIViewController, UITextFieldDelegate
         self.loginAndSignup()
     }
     
-    // MARK: Login and User creation functions
-    
-    func loginAndSignup() -> Void
+    func annimateSignInLoading(show: Bool) -> Void
     {
-        
-        guard let emailText = self.emailTextFeild?.text, !emailText.isEmpty else {self.showBasicError(title: "Whoops", message: "Please enter both an email and password. If you dont have a password, enter one and an account will be made for you.", buttonTitle: "Ok") ; return}
-        guard let passwordText = self.passwordTextFeild?.text, !passwordText.isEmpty else {self.showBasicError(title: "Whoops", message: "Please enter both an email and password. If you dont have a password, enter one and an account will be made for you.", buttonTitle: "Ok") ; return}
-        
-        
-        Auth.auth().createUser(withEmail: emailText, password: passwordText)
-        {
-            (newUser, error) in
-            
-            if error != nil || newUser?.uid == nil
-            {
-                Auth.auth().signIn(withEmail: emailText, password: passwordText)
-                {
-                    (user, error) in
-                    
-                    if error != nil && user?.uid != nil
-                    {
-                        Application.shared().loadCurrentUser(userId: (newUser?.uid)!, completion:
-                        {
-                            (error, existingAppUser) in
-                            
-                            if existingAppUser != nil && !error
-                            {
-                                let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "RootNavigationController") as! UINavigationController
-                                self.present(vc, animated: false, completion: nil)
-                            }
-                            else
-                            {
-                                self.showBasicError(title: "Unknown Error", message: "There has likely been a network error. Please try again.", buttonTitle: "Ok")
-                            }
-                        })
-                    }
-                    else
-                    {
-                        self.showBasicError(title: "Incorrect Entry", message: "Please make sure you have entered your password correctly and that your email is valid.", buttonTitle: "Ok")
-                    }
-                }
-            }
-            else
-            {
-                APIClient.createUser(userID: (newUser?.uid)!, email: emailText, success:
-                {
-                    (NewAppUser) in
-                    
-                    Application.shared().currentUser = NewAppUser
-                    let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "RootNavigationController") as! UINavigationController
-                    self.present(vc, animated: false, completion: nil)
-                    
-                }, failure:
-                {
-                    (error) in
-                    
-                    self.showBasicError(title: "Unknown Error", message: "There has likely been a network error. Please try again.", buttonTitle: "Ok")
-                })
-            }
-        }
+        let title = show ? "Continue":""
+        self.continueButton?.setTitle(title, for: .normal)
+        if show {self.loadingActivityIndicator?.stopAnimating()} else {self.loadingActivityIndicator?.startAnimating()}
     }
-
     
     // MARK: Text Feild Delagate
     
@@ -196,13 +210,18 @@ class InitialViewController: UIViewController, UITextFieldDelegate
         return true
     }
     
-    
     // MARK: User Facing Errors
     
     func showBasicError(title: String, message: String, buttonTitle: String) -> Void
     {
+        self.annimateSignInLoading(show: true)
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    deinit
+    {
+        self.logoImage?.image = nil
     }
 }

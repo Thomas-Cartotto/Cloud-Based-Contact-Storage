@@ -21,6 +21,9 @@ class ExpandedContactViewController: UIViewController
     @IBOutlet weak var phoneLabel: UITextView?
     @IBOutlet weak var dateAddedLabel: UILabel?
     
+    var dateLabelState = 0
+    var dateOptions: [String]?
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -47,6 +50,23 @@ class ExpandedContactViewController: UIViewController
         self.phoneLabel?.text = self.currentContact?.phoneNumber
         self.profileImage?.af_setImage(withURL: URL(string: self.currentContact?.avatarImageURL ?? "noImage")!, placeholderImage: nil, filter: nil, progress: nil, progressQueue: .global(qos: .default), imageTransition: .crossDissolve(0.6), runImageTransitionIfCached: false, completion: nil)
         guard let timeOfCreation = self.currentContact?.timeAdded else {self.dateAddedLabel?.text = "In the Past"; return}
-        self.dateAddedLabel?.text = Date(timeIntervalSince1970: timeOfCreation).toStringWithRelativeTime()
+        let date = Date(timeIntervalSince1970: timeOfCreation)
+        self.dateOptions = [date.toStringWithRelativeTime().capitalized, date.toString(style: .short)]
+        self.dateAddedLabel?.text = self.dateOptions?[self.dateLabelState] ?? "No date data"
+        
+        // Add gesture to label
+        self.dateAddedLabel?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(userTapDateLabel(tapGestureRecognizer:))))
+    }
+    
+    @objc func userTapDateLabel(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        self.dateLabelState = self.dateLabelState == 0 ? 1:0
+        self.dateAddedLabel?.text = self.dateOptions?[self.dateLabelState] ?? "No date data"
+    }
+    
+    deinit
+    {
+        self.profileImage?.image = nil
+        self.currentContact = nil
     }
 }

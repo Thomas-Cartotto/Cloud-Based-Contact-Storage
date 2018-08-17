@@ -12,6 +12,7 @@
 		862161AA21260DBB00CEECBE /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862161A921260DBB00CEECBE /* HelperFunctions.swift */; };
 		862161AC21260E4400CEECBE /* AppUserResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 862161AB21260E4300CEECBE /* AppUserResponse.json */; };
 		862161AE2126111600CEECBE /* ContactResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 862161AD2126111600CEECBE /* ContactResponse.json */; };
+		862161B02126251B00CEECBE /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862161AF2126251B00CEECBE /* AddContactViewController.swift */; };
 		868A68AB2124A012007E47BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A68AA2124A012007E47BB /* AppDelegate.swift */; };
 		868A68B02124A012007E47BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868A68AE2124A012007E47BB /* Main.storyboard */; };
 		868A68B32124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 868A68B12124A012007E47BB /* Prosper_Code_Challenge.xcdatamodeld */; };
@@ -66,6 +67,7 @@
 		862161A921260DBB00CEECBE /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		862161AB21260E4300CEECBE /* AppUserResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppUserResponse.json; sourceTree = "<group>"; };
 		862161AD2126111600CEECBE /* ContactResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ContactResponse.json; sourceTree = "<group>"; };
+		862161AF2126251B00CEECBE /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		868A68A72124A012007E47BB /* Prosper Code Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prosper Code Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		868A68AA2124A012007E47BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868A68AF2124A012007E47BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				868A68E52124ABAB007E47BB /* ContactsViewController.swift */,
 				868A68F42125235A007E47BB /* ExpandedContactViewController.swift */,
 				868A68F22124C626007E47BB /* InitialViewController.swift */,
+				862161AF2126251B00CEECBE /* AddContactViewController.swift */,
 				868A68E72124B11A007E47BB /* ContactTableViewCell.swift */,
 			);
 			path = ViewControllers;
@@ -544,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				868A68E42124A23F007E47BB /* Contact.swift in Sources */,
+				862161B02126251B00CEECBE /* AddContactViewController.swift in Sources */,
 				868A68EF2124B791007E47BB /* Application.swift in Sources */,
 				868A68E82124B11A007E47BB /* ContactTableViewCell.swift in Sources */,
 				868A68F32124C626007E47BB /* InitialViewController.swift in Sources */,

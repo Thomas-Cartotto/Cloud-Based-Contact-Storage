@@ -23,13 +23,6 @@ open class AppUser: NSObject
         self.userID = userID
     }
     
-    open override func isEqual(_ object: Any?) -> Bool
-    {
-        guard let rhs = object as? AppUser else { return false }
-        return self == rhs
-    }
-    
-    
     public func reloadContacts(completion: @escaping (_ error: Bool, _ contacts: [Contact]?) ->())
     {
         guard let userID = self.userID else {completion(true, nil); return}
@@ -44,6 +37,31 @@ open class AppUser: NSObject
         {
             (error: Bool) in
             completion(true, nil)
+        })
+    }
+    
+    public func addNewContact(imageData: Data, firstName: String, lastName: String, email: String, phoneNumber: String, timeAdded: Double, completion: @escaping (_ error: Bool) ->())
+    {
+        guard let userID = self.userID else {completion(true); return}
+
+        APIClient.createContact(userID: userID, imageData: imageData, firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber, timeAdded: timeAdded, success:
+        {
+            (newContact: Contact) in
+            if self.contacts == nil
+            {
+                self.contacts = [newContact]
+            }
+            else
+            {
+                self.contacts?.append(newContact)
+            }
+            self.contacts = self.contacts?.sorted(by: {$0.fullName ?? "A" < $1.fullName ?? "B"})
+            completion(false)
+        },
+        failure:
+        {
+            (error: Bool) in
+            completion(true)
         })
     }
 }
@@ -73,4 +91,3 @@ public func != (lhs: AppUser, rhs: AppUser) -> Bool
 {
     return !(lhs == rhs)
 }
-

@@ -7,12 +7,9 @@
 //
 
 import Foundation
-import Alamofire
-import AlamofireImage
-import ObjectMapper
-import Firebase
-import AFDateHelper
 import FirebaseFirestore
+import ObjectMapper
+import FirebaseStorage
 
 open class APIClient
 {
@@ -44,11 +41,13 @@ open class APIClient
         db.collection("Users").document(userID).setData([
             "userID": userID,
             "email": email
-        ]) { err in
+        ])
+        {err in
             if err != nil
             {
                 failure!(true)
-            } else
+            }
+            else
             {
                 success!(AppUser(email: email, userID: userID))
             }
@@ -82,7 +81,6 @@ open class APIClient
         }
     }
     
-    
     open class func deleteContact (userID: String, contactID: String, success: ((_ result: Bool) -> ())?, failure: ((_ error: Bool) -> ())?)
     {
         let db = Firestore.firestore()
@@ -95,6 +93,49 @@ open class APIClient
             else
             {
                 success!(true)
+            }
+        }
+    }
+    
+    open class func createContact (userID: String, imageData: Data, firstName: String, lastName: String, email: String, phoneNumber: String, timeAdded: Double, success: ((_ contact: Contact) -> ())?, failure: ((_ error: Bool) -> ())?)
+    {
+        let contactID = NSUUID().uuidString
+        let db = Firestore.firestore()
+        
+        let storageRef = Storage.storage().reference().child("Users").child(userID).child("Contacts").child("\(contactID).jpg")
+        storageRef.putData(imageData, metadata: nil)
+        {
+            (metadata, error) in
+            storageRef.downloadURL
+            {
+                (url, error) in
+                guard let downloadURL = url else {failure!(true); return}
+                
+                if error == nil
+                {
+                    db.collection("Users").document(userID).collection("contacts").document(contactID).setData([
+                        "contactID": contactID,
+                        "fullName": "\(firstName) \(lastName)",
+                        "email": email,
+                        "phoneNumber": phoneNumber,
+                        "avatarImageURL": downloadURL.absoluteString,
+                        "timeAdded": timeAdded
+                        ])
+                    {err in
+                        if err != nil
+                        {
+                            failure!(true)
+                        }
+                        else
+                        {
+                            success!(Contact(avatarURL: downloadURL.absoluteString, fullName: "\(firstName) \(lastName)", email: email, phoneNumber: phoneNumber, timeAdded: timeAdded, contactID: contactID))
+                        }
+                    }
+                }
+                else
+                {
+                    failure!(true)
+                }
             }
         }
     }

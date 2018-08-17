@@ -9,7 +9,6 @@
 import Foundation
 import ObjectMapper
 
-
 open class Contact: NSObject
 {
     open var avatarImageURL: String?
