@@ -1,7 +1,7 @@
 # Cloud Based Contact Storage
 iOS application to store contacts in the cloud with security (interview coding challenge)
 
-To run open <Prosper Code Challenge.xcworkspace>
+To run open Prosper Code Challenge.xcworkspace
 
 Demonstrates:
 
