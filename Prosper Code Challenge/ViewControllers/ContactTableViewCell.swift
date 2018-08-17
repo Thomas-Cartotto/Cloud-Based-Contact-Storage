@@ -13,6 +13,7 @@ class ContactTableViewCell: UITableViewCell
     
     @IBOutlet weak var avatarImageView: UIImageView?
     @IBOutlet weak var nameLabel: UILabel?
+    @IBOutlet weak var shadowView: UIView?
     
     override func awakeFromNib()
     {
@@ -21,7 +22,13 @@ class ContactTableViewCell: UITableViewCell
         // Adding Style to the avatar Image View
         self.avatarImageView?.layer.cornerRadius = 35
         self.avatarImageView?.clipsToBounds = true
-        self.avatarImageView?.layer.borderWidth = 1
-        self.avatarImageView?.layer.borderColor = UIColor.black.cgColor
+        
+        // Adding Depth to Avatar Image
+        self.shadowView?.clipsToBounds = false
+        self.shadowView?.layer.shadowColor = UIColor.black.cgColor
+        self.shadowView?.layer.shadowOpacity = 0.5
+        self.shadowView?.layer.shadowOffset = CGSize.zero
+        self.shadowView?.layer.shadowRadius = 3
+        self.shadowView?.layer.shadowPath = UIBezierPath(roundedRect: (self.shadowView?.bounds)!, cornerRadius: 35).cgPath
     }
 }

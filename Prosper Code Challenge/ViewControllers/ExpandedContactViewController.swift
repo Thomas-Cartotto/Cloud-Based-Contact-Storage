@@ -20,6 +20,7 @@ class ExpandedContactViewController: UIViewController
     @IBOutlet weak var emailLabel: UITextView?
     @IBOutlet weak var phoneLabel: UITextView?
     @IBOutlet weak var dateAddedLabel: UILabel?
+    @IBOutlet weak var shadowView: UIView?
     
     var dateLabelState = 0
     var dateOptions: [String]?
@@ -41,8 +42,14 @@ class ExpandedContactViewController: UIViewController
         // Change the style of the imageView
         self.profileImage?.layer.cornerRadius = (self.profileImage?.frame.width ?? 136)/2
         self.profileImage?.clipsToBounds = true
-        self.profileImage?.layer.borderWidth = 1
-        self.profileImage?.layer.borderColor = UIColor.black.cgColor
+        
+        // Adding Depth to Avatar Image
+        self.shadowView?.clipsToBounds = false
+        self.shadowView?.layer.shadowColor = UIColor.black.cgColor
+        self.shadowView?.layer.shadowOpacity = 0.5
+        self.shadowView?.layer.shadowOffset = CGSize.zero
+        self.shadowView?.layer.shadowRadius = 4
+        self.shadowView?.layer.shadowPath = UIBezierPath(roundedRect: (self.shadowView?.bounds)!, cornerRadius: (self.profileImage?.frame.width ?? 136)/2).cgPath
         
         // Populate views with data
         self.nameLabel?.text = self.currentContact?.fullName

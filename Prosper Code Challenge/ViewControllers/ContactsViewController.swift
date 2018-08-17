@@ -120,7 +120,14 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
                 let avatarURl = self.mutableContacts[indexPath.row].avatarImageURL else {return UITableViewCell()}
             
             cell.nameLabel?.text = name
-            cell.avatarImageView?.af_setImage(withURL: URL(string: avatarURl)!, placeholderImage: UIImage(named: "1095867-200"), filter: nil, progress: nil, progressQueue: .global(qos: .background), imageTransition: .crossDissolve(0.5) , runImageTransitionIfCached: false, completion: nil)
+            cell.avatarImageView?.af_setImage(withURL: URL(string: avatarURl)!, placeholderImage: UIImage(named: "1095867-200"), filter: nil, progress: nil, progressQueue: .global(qos: .background), imageTransition: .crossDissolve(0.5) , runImageTransitionIfCached: false, completion:
+            {
+                (response) in
+                UIView.animate(withDuration: 0.6, animations:
+                {
+                    cell.shadowView?.alpha = 1
+                })
+            })
             return cell
         }
     }

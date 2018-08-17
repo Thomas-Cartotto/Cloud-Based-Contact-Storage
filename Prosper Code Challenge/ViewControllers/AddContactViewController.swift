@@ -23,6 +23,7 @@ class AddContactViewController: UIViewController, UITextFieldDelegate, UIImagePi
     @IBOutlet weak var email: UITextField?
     @IBOutlet weak var phoneNumber: UITextField?
     @IBOutlet weak var saveContactButton: UIButton?
+    @IBOutlet weak var shadowView: UIView?
     
     var addDelegate: ContactAddedDelegate!
     
@@ -54,8 +55,16 @@ class AddContactViewController: UIViewController, UITextFieldDelegate, UIImagePi
         //Setup Avatar Image
         self.profileImage?.layer.cornerRadius = (self.profileImage?.frame.width ?? 120)/2
         self.profileImage?.clipsToBounds = true
-        self.profileImage?.layer.borderWidth = 1.5
-        self.profileImage?.layer.borderColor = UIColor.darkGray.cgColor
+        self.profileImage?.layer.borderWidth = 1
+        self.profileImage?.layer.borderColor = UIColor.black.cgColor
+        
+        // Adding Depth to Avatar Image
+        self.shadowView?.clipsToBounds = false
+        self.shadowView?.layer.shadowColor = UIColor.black.cgColor
+        self.shadowView?.layer.shadowOpacity = 0.5
+        self.shadowView?.layer.shadowOffset = CGSize.zero
+        self.shadowView?.layer.shadowRadius = 4
+        self.shadowView?.layer.shadowPath = UIBezierPath(roundedRect: (self.shadowView?.bounds)!, cornerRadius: (self.profileImage?.frame.width ?? 120)/2).cgPath
         
         //Setup Button
         self.saveContactButton?.layer.cornerRadius = 18
@@ -80,6 +89,11 @@ class AddContactViewController: UIViewController, UITextFieldDelegate, UIImagePi
     @objc func userSwipeImage(tapGestureRecognizer: UITapGestureRecognizer)
     {
         self.profileImage?.image = nil
+        self.profileImage?.layer.borderColor = UIColor.black.cgColor
+        UIView.animate(withDuration: 0.4, animations:
+        {
+            self.shadowView?.alpha = 0
+        })
     }
     
     @objc func userTapScreen(tapGestureRecognizer: UITapGestureRecognizer)
@@ -148,6 +162,11 @@ class AddContactViewController: UIViewController, UITextFieldDelegate, UIImagePi
         
         self.profileImage?.image = nil
         self.profileImage?.image = image
+        self.profileImage?.layer.borderColor = UIColor.clear.cgColor
+        UIView.animate(withDuration: 0.6, animations:
+        {
+            self.shadowView?.alpha = 1
+        })
     }
     
     // MARK: Uploading the Contact
