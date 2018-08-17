@@ -71,7 +71,6 @@ extension AppUser: Mappable
     public func mapping(map: Map)
     {
         self.email         <- map["email"]
-        self.userID          <- map["userID"]
     }
 }
 

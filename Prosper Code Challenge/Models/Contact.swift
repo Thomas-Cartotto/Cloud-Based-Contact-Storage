@@ -47,8 +47,6 @@ extension Contact: Mappable
         self.phoneNumber       <- map["phoneNumber"]
         self.timeAdded         <- map["timeAdded"]
         self.email             <- map["email"]
-        self.contactID         <- map["contactID"]
-
     }
 }
 

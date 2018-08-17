@@ -13,7 +13,7 @@ import FirebaseStorage
 
 open class APIClient
 {
-    open class func loadUserData (userID: String, success: ((_ user: AppUser) -> ())?, failure: ((_ error: Bool) -> ())?)
+    open class func loadUserData (userID: String, success: @escaping ((_ user: AppUser) -> ()), failure: @escaping ((_ error: Bool) -> ()))
     {
         let db = Firestore.firestore()
         db.collection("Users").document(userID).getDocument()
@@ -22,39 +22,39 @@ open class APIClient
             
             if err != nil
             {
-                failure!(true)
+                failure(true)
             }
             else
             {
                 let data = querySnapshot!.data() as NSDictionary?
                 if let user = Mapper<AppUser>().map(JSONObject: data)
                 {
-                    success!(user)
+                    user.userID = querySnapshot?.documentID
+                    success(user)
                 }
             }
         }
     }
     
-    open class func createUser (userID: String, email: String, success: ((_ user: AppUser) -> ())?, failure: ((_ error: Bool) -> ())?)
+    open class func createUser (userID: String, email: String, success: @escaping ((_ user: AppUser) -> ()), failure: @escaping ((_ error: Bool) -> ()))
     {
         let db = Firestore.firestore()
         db.collection("Users").document(userID).setData([
-            "userID": userID,
             "email": email
         ])
         {err in
             if err != nil
             {
-                failure!(true)
+                failure(true)
             }
             else
             {
-                success!(AppUser(email: email, userID: userID))
+                success(AppUser(email: email, userID: userID))
             }
         }
     }
     
-    open class func loadUserContacts (userID: String, success: ((_ contacts: [Contact]) -> ())?, failure: ((_ error: Bool) -> ())?)
+    open class func loadUserContacts (userID: String, success: @escaping ((_ contacts: [Contact]) -> ()), failure: @escaping ((_ error: Bool) -> ()))
     {
         let db = Firestore.firestore()
         db.collection("Users").document(userID).collection("contacts").getDocuments()
@@ -63,7 +63,7 @@ open class APIClient
             
             if err != nil
             {
-                failure!(true)
+                failure(true)
             }
             else
             {
@@ -73,48 +73,49 @@ open class APIClient
                     let data = document.data() as NSDictionary?
                     if let contact = Mapper<Contact>().map(JSONObject: data)
                     {
+                        contact.contactID = document.documentID
                         tempContacts.append(contact)
                     }
                 }
-                success!(tempContacts.sorted(by: {$0.fullName ?? "A" < $1.fullName ?? "B"}))
+                success(tempContacts.sorted(by: {$0.fullName ?? "A" < $1.fullName ?? "B"}))
             }
         }
     }
     
-    open class func deleteContact (userID: String, contactID: String, success: ((_ result: Bool) -> ())?, failure: ((_ error: Bool) -> ())?)
+    open class func deleteContact (userID: String, contactID: String, success: @escaping ((_ result: Bool) -> ()), failure: @escaping ((_ error: Bool) -> ()))
     {
         let db = Firestore.firestore()
         db.collection("Users").document(userID).collection("contacts").document(contactID).delete()
         { err in
             if err != nil
             {
-                failure!(true)
+                failure(true)
             }
             else
             {
-                success!(true)
+                success(true)
             }
         }
     }
     
-    open class func createContact (userID: String, imageData: Data, firstName: String, lastName: String, email: String, phoneNumber: String, timeAdded: Double, success: ((_ contact: Contact) -> ())?, failure: ((_ error: Bool) -> ())?)
+    open class func createContact (userID: String, imageData: Data, firstName: String, lastName: String, email: String, phoneNumber: String, timeAdded: Double, success: @escaping ((_ contact: Contact) -> ()), failure: @escaping ((_ error: Bool) -> ()))
     {
-        let contactID = NSUUID().uuidString
         let db = Firestore.firestore()
         
-        let storageRef = Storage.storage().reference().child("Users").child(userID).child("Contacts").child("\(contactID).jpg")
+        let contactRef = db.collection("Users").document(userID).collection("contacts").document()
+        
+        let storageRef = Storage.storage().reference().child("Users").child(userID).child("Contacts").child("\(contactRef.documentID).jpg")
         storageRef.putData(imageData, metadata: nil)
         {
             (metadata, error) in
             storageRef.downloadURL
             {
                 (url, error) in
-                guard let downloadURL = url else {failure!(true); return}
+                guard let downloadURL = url else {failure(true); return}
                 
                 if error == nil
                 {
-                    db.collection("Users").document(userID).collection("contacts").document(contactID).setData([
-                        "contactID": contactID,
+                    contactRef.setData([
                         "fullName": "\(firstName) \(lastName)",
                         "email": email,
                         "phoneNumber": phoneNumber,
@@ -124,17 +125,17 @@ open class APIClient
                     {err in
                         if err != nil
                         {
-                            failure!(true)
+                            failure(true)
                         }
                         else
                         {
-                            success!(Contact(avatarURL: downloadURL.absoluteString, fullName: "\(firstName) \(lastName)", email: email, phoneNumber: phoneNumber, timeAdded: timeAdded, contactID: contactID))
+                            success(Contact(avatarURL: downloadURL.absoluteString, fullName: "\(firstName) \(lastName)", email: email, phoneNumber: phoneNumber, timeAdded: timeAdded, contactID: contactRef.documentID))
                         }
                     }
                 }
                 else
                 {
-                    failure!(true)
+                    failure(true)
                 }
             }
         }
